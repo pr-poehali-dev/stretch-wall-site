@@ -47,21 +47,22 @@ const Index = () => {
     <div className="min-h-screen">
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-secondary to-accent">
         <div className="absolute inset-0 bg-black/20" />
-        <div className="container relative z-10 text-center text-white animate-fade-in">
-          <h1 className="text-6xl md:text-8xl font-bold mb-6 drop-shadow-2xl">
+        <div className="container relative z-10 text-center text-white animate-fade-in px-4">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-6 drop-shadow-2xl">
             Натяжные стены
           </h1>
-          <p className="text-2xl md:text-3xl mb-8 drop-shadow-lg">
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-6 md:mb-8 drop-shadow-lg px-4">
             Превратим ваш интерьер в произведение искусства
           </p>
-          <div className="flex gap-4 justify-center">
-            <Button size="lg" className="text-lg px-8 py-6 bg-white text-primary hover:bg-white/90 hover:scale-105 transition-transform">
-              <Icon name="Phone" className="mr-2" />
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-md sm:max-w-none mx-auto">
+            <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 bg-white text-primary hover:bg-white/90 hover:scale-105 transition-transform w-full sm:w-auto">
+              <Icon name="Phone" className="mr-2" size={20} />
               Позвонить
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 transition-transform">
-              <Icon name="Calculator" className="mr-2" />
-              Рассчитать стоимость
+            <Button size="lg" variant="outline" className="text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary hover:scale-105 transition-transform w-full sm:w-auto">
+              <Icon name="Calculator" className="mr-2" size={20} />
+              <span className="hidden sm:inline">Рассчитать стоимость</span>
+              <span className="sm:hidden">Калькулятор</span>
             </Button>
           </div>
         </div>
@@ -70,12 +71,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-white to-muted/30">
-        <div className="container">
-          <h2 className="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+      <section className="py-12 md:py-20 bg-gradient-to-b from-white to-muted/30">
+        <div className="container px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
             Наши преимущества
           </h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">
+          <p className="text-center text-muted-foreground mb-8 md:mb-12 text-base md:text-lg">
             Почему выбирают нас
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -94,15 +95,15 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-muted/30">
-        <div className="container">
-          <h2 className="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+      <section className="py-12 md:py-20 bg-muted/30">
+        <div className="container px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
             Галерея работ
           </h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">
+          <p className="text-center text-muted-foreground mb-8 md:mb-12 text-base md:text-lg">
             Наши лучшие проекты
           </p>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {galleryImages.map((img, idx) => (
               <div key={idx} className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-scale-in" style={{ animationDelay: `${idx * 0.15}s` }}>
                 <img src={img} alt={`Проект ${idx + 1}`} className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" />
@@ -115,12 +116,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
-        <div className="container max-w-2xl">
-          <h2 className="text-5xl font-bold text-center mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5">
+        <div className="container max-w-2xl px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
             Калькулятор стоимости
           </h2>
-          <p className="text-center text-muted-foreground mb-12 text-lg">
+          <p className="text-center text-muted-foreground mb-8 md:mb-12 text-base md:text-lg">
             Узнайте примерную стоимость за 30 секунд
           </p>
           <Card className="shadow-2xl border-2 animate-scale-in">
@@ -146,12 +147,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-primary via-secondary to-accent text-white">
-        <div className="container max-w-2xl">
-          <h2 className="text-5xl font-bold text-center mb-4">
+      <section className="py-12 md:py-20 bg-gradient-to-br from-primary via-secondary to-accent text-white">
+        <div className="container max-w-2xl px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-3 md:mb-4">
             Бесплатный замер
           </h2>
-          <p className="text-center text-white/90 mb-12 text-lg">
+          <p className="text-center text-white/90 mb-8 md:mb-12 text-base md:text-lg">
             Оставьте заявку и получите точный расчёт
           </p>
           <Card className="shadow-2xl border-none animate-scale-in">
@@ -211,9 +212,9 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-12 bg-foreground text-background">
-        <div className="container">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+      <footer className="py-8 md:py-12 bg-foreground text-background">
+        <div className="container px-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-6 md:mb-8">
             <div>
               <h3 className="text-2xl font-bold mb-4">Натяжные стены</h3>
               <p className="text-background/80">Профессиональный монтаж с 2012 года</p>
