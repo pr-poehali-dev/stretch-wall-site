@@ -39,7 +39,7 @@ const Index = () => {
   const advantages = [
     { icon: 'Zap', title: 'Быстрый монтаж', desc: 'Установка за 1 день без пыли и грязи' },
     { icon: 'Shield', title: 'Гарантия 10 лет', desc: 'Официальная гарантия на все работы' },
-    { icon: 'Sparkles', title: 'Европейские материалы', desc: 'Только сертифицированные полотна' },
+    { icon: 'Sparkles', title: 'Европейские материалы', desc: 'Только сертифицированные полотна для стен' },
     { icon: 'Award', title: '5000+ проектов', desc: 'Опыт работы более 12 лет' }
   ];
 
@@ -49,7 +49,7 @@ const Index = () => {
         <div className="absolute inset-0 bg-black/20" />
         <div className="container relative z-10 text-center text-white animate-fade-in">
           <h1 className="text-6xl md:text-8xl font-bold mb-6 drop-shadow-2xl">
-            Натяжные потолки
+            Натяжные стены
           </h1>
           <p className="text-2xl md:text-3xl mb-8 drop-shadow-lg">
             Превратим ваш интерьер в произведение искусства
@@ -125,8 +125,8 @@ const Index = () => {
           </p>
           <Card className="shadow-2xl border-2 animate-scale-in">
             <CardHeader>
-              <CardTitle>Рассчитайте стоимость потолка</CardTitle>
-              <CardDescription>Укажите площадь помещения</CardDescription>
+              <CardTitle>Рассчитайте стоимость стены</CardTitle>
+              <CardDescription>Укажите площадь стены</CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
@@ -215,7 +215,7 @@ const Index = () => {
         <div className="container">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Натяжные потолки</h3>
+              <h3 className="text-2xl font-bold mb-4">Натяжные стены</h3>
               <p className="text-background/80">Профессиональный монтаж с 2012 года</p>
             </div>
             <div>
@@ -227,7 +227,7 @@ const Index = () => {
                 </p>
                 <p className="flex items-center gap-2">
                   <Icon name="Mail" size={18} />
-                  info@potolki.ru
+                  info@steny.ru
                 </p>
                 <p className="flex items-center gap-2">
                   <Icon name="MapPin" size={18} />
@@ -244,7 +244,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-background/20 pt-6 text-center text-background/60">
-            <p>© 2024 Натяжные потолки. Все права защищены.</p>
+            <p>© 2024 Натяжные стены. Все права защищены.</p>
           </div>
         </div>
       </footer>
