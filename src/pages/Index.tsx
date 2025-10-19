@@ -47,6 +47,11 @@ const Index = () => {
     <div className="min-h-screen">
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-secondary to-accent">
         <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-to-t from-white/20 to-transparent animate-wave" />
+          <div className="absolute bottom-0 left-0 right-0 h-80 bg-gradient-to-t from-white/10 to-transparent animate-wave" style={{ animationDelay: '1s' }} />
+          <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-white/5 to-transparent animate-wave" style={{ animationDelay: '2s' }} />
+        </div>
         <div className="container relative z-10 text-center text-white animate-fade-in px-4">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-6 drop-shadow-2xl">
             Натяжные стены
